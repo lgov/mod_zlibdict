@@ -4,18 +4,16 @@
 ##
 
 builddir=build
-#top_srcdir=/usr
+top_srcdir=/opt/local/apache2/
 top_builddir=/opt/local/apache2/
+
 include /opt/local/apache2/build/special.mk
 
 #   the used tools
 APXS=apxs
-APACHECTL=apachectl
+APACHECTL=/opt/local/apache2/bin/apachectl
 
 #   additional defines, includes and libraries
-#DEFS=-Dmy_define=my_value
-#INCLUDES=-Imy/include/dir
-#LIBS=-Lmy/lib/dir -lmylib
 
 #   the default target
 all: local-shared-build
@@ -25,7 +23,7 @@ install: install-modules-yes
 
 #   cleanup
 clean:
-	-rm -f build/mod_zlibdict.o build/mod_zlibdict.lo build/mod_zlibdict.slo build/lsmod_zlibdict.la
+	-rm -f mod_zlibdict.o mod_zlibdict.lo mod_zlibdict.slo mod_zlibdict.la
 
 #   simple test
 test: reload
