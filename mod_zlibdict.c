@@ -24,6 +24,12 @@
 
 static int zlibdict_handler(request_rec *r)
 {
+    if (!r->handler || strcmp(r->handler, "zlibdict")) {
+        return DECLINED;
+    }
+
+    ap_set_content_type(r, "text/html;charset=ascii");
+    ap_rputs("<html><body>hello world</body></html>", r);
     return OK;
 }
 

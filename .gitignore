@@ -13,3 +13,8 @@ build/*
 xcuserdata
 profile
 *.moved-aside
+*.lo
+*.o
+*.la
+*.slo
+.libs
