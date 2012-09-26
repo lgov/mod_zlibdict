@@ -18,3 +18,4 @@ profile
 *.la
 *.slo
 .libs
+.DS_Store
