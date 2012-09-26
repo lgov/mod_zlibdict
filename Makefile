@@ -13,6 +13,8 @@ include /opt/local/apache2/build/special.mk
 APXS=apxs
 APACHECTL=/opt/local/apache2/bin/apachectl
 
+CFLAGS=-g
+
 #   additional defines, includes and libraries
 
 #   the default target
